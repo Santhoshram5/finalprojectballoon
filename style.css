@@ -1,0 +1,212 @@
+ :root{
+    --primary: #f393fd;
+    --primarydark:black;
+    --bg:rgb(224,217,217);
+    --shadow:2px 0 8px rgba(0,0,0,.3);
+    --corners:4px;
+    --text-color:brown;
+    --light:white;
+}
+
+
+body{
+    background-color: burlywood;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 16pt;
+    color: var(--text-color);
+
+}
+
+header{
+    margin: 3em 0;
+}
+
+img{
+    max-width: 100%;
+}
+form{
+    margin: 0;
+}
+input{
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 16pt;
+}
+button{
+    background-color: var(--primarydark);
+    color: var(--light);
+    border: 1px solid var(--primarydark);
+    border-radius: var(--corners);
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+    transition: all .2s ease;
+    cursor: pointer;
+    padding: 1em;
+}
+button:hover{
+    background-color: red;
+}
+
+.balloon{
+    height:120px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 50%;
+    transition: all .2s ease;
+    animation: balloon-float 5s ease-in-out infinite;
+    align-self: flex-end;
+    margin: 0 auto;
+    box-shadow: inset -10px -10px 12px black,inset 10px 10px 12px black;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(242,247,5,1) 57%, rgba(0,212,255,1) 100%);
+}
+.balloon.green{
+    filter: hue-rotate(130deg);
+  
+}
+ 
+.text-center{
+    text-align: center;
+}
+.balloon.blue{
+    filter: hue-rotate(225deg);
+}
+.balloon.purple{
+    filter: hue-rotate(225deg);
+}
+.balloon.pink{
+    filter: hue-rotate(325deg);
+}
+.game-container{
+    height: 300px;
+}
+.card{
+    background-color: var(--light);
+    padding: 1em;
+    box-shadow: var(--shadow);
+    border-radius: var(--corners);
+}
+.container{
+    
+        width:50%;
+        margin:auto;
+}
+@media screen and (max-width :700px)
+{
+    .container{
+        width: 90%;
+    }
+}
+.shadow{
+    filter:drop-shadow(var(--shadow));
+
+}
+.pump{
+    margin-top: 80px;
+    height: 130px;
+    width: 180px;
+    position: relative;
+    align-self: flex-end;
+}
+.handle{
+    height: 10px;
+    width: 80px;
+    background-color: black;
+    position: absolute;
+    top:-80px;
+    left: 50px;
+    display: flex; 
+    justify-content: center;
+    transition: all .05s linear;
+    z-index: 1;
+}
+.handle::before{
+    content: " ";
+    background-color: black;
+    width: 10px;
+    height: 80px;
+    display: block;
+}
+.pump:active .handle{
+    top: -20px;
+}
+@keyframes balloon-float{
+    0%,100%{
+        transform: translateY(-25px) rotate(5deg);
+
+    }
+    50%{
+        transform: translateY(0px) rotate(-5deg);
+    }
+}
+.pump-box{
+    background-color: black;
+    height: 130px;
+    width: 180px;
+     border-top-right-radius: 20px;
+     border-top-left-radius: 20px;
+     z-index: 2;
+     position: absolute;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     user-select: none;
+} 
+
+.darkback{
+       background-color: black;
+}
+.btn-darkback
+{
+    background-color: black;
+    border-color: yellow;
+}
+.lightdisplay{
+       color: yellow;
+}
+.pump-box span{
+    background-color:yellow;
+    padding: .5em;
+}
+.greyback{
+    background-color: brown;
+}
+.d-flex
+{
+    display: flex;
+    align-items: center;
+}
+.d-flex.space-between{
+    justify-content: space-between;
+}
+.d-flex.space-around{
+    justify-content: space-around;
+}
+.mt-1
+{
+    margin-top: .5em;
+}
+.mt-2
+{
+    margin-top: 1em;
+}
+.mt-3
+{
+    margin-top: 1.5em;
+}
+.mb-1
+{
+    margin-bottom: .5em;
+}
+.mb-2
+{
+    margin-bottom: 1em;
+}
+.mb-3
+{
+    margin-bottom: 1.5em;
+}
+.hidden{
+    display: none !important;
+}
